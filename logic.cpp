@@ -18,10 +18,7 @@ int count_even_digits(long long number) {
 
 
     int lastDigit = number % 10;
-    if (lastDigit % 2 == 0) {
-        return 1 + count_even_digits(number / 10);
-    }
-    else {
-        return count_even_digits(number / 10);
-    }
+    return lastDigit % 2 == 0 ? 1: 0  + count_even_digits(number / 10);
+  
+   
 }
